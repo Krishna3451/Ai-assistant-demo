@@ -1,8 +1,8 @@
 {
   "/_not-found/page": "app/_not-found/page.js",
-  "/api/verify/check/route": "app/api/verify/check/route.js",
   "/api/route": "app/api/route.js",
   "/api/verify/send/route": "app/api/verify/send/route.js",
+  "/login/page": "app/login/page.js",
   "/page": "app/page.js",
-  "/login/page": "app/login/page.js"
+  "/api/verify/check/route": "app/api/verify/check/route.js"
 }
