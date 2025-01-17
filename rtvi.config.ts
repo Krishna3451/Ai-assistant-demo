@@ -99,7 +99,7 @@ export const defaultConfig = [
           },
           {
             role: "user",
-            content: "Reply in the language user request to don't to tell translation of the reply just reply in the language user request. So just Start by Saying 'Hello, how can i help you?' only just that",
+            content: "Reply in the language user request to don't to tell translation of the reply just reply in the language user request. So just Start by Saying 'Hello, how can i help you?' only just that. Keep your answes short and upto the point avoid short talk and give direct answers only"
           },
         ],
       },
