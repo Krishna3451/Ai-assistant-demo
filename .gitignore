@@ -2,37 +2,42 @@
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
 
 # Testing
 /coverage
 
-# Next.js
-/.next/
-/out/
+# Next.js (Important: uncomment the following line if using a custom output directory)
+#/out/  <- Uncomment if you are using "next export" and intend to deploy the "out" directory
 
-# Production
+# Production (usually managed by build process)
 /build
 
 # Misc
 .DS_Store
 *.pem
+*.key  # Add if you have private keys (do NOT commit these!)
 
 # Debug
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Local env files
+# Local Environment Files
 .env*.local
 .env
 
-# Vercel
+# Vercel (or other platform-specific files)
 .vercel
 
 # TypeScript
 *.tsbuildinfo
-next-env.d.ts
+
 
 # IDE/Editor specific
 .idea/
@@ -47,4 +52,4 @@ next-env.d.ts
 .Spotlight-V100
 .Trashes
 ehthumbs.db
-Thumbs.db 
+Thumbs.db
