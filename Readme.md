@@ -42,7 +42,7 @@ An interactive AI assistant powered by real-time voice communication and compute
 1. Clone the repository:
 ```bash
 
-cd ai-teacher-demo
+git clone https://github.com/Krishna3451/Ai-assistant-demo.git
 ```
 
 2. Install dependencies:
