@@ -1,8 +1,8 @@
 
 
-# AI Teaching Assistant Demo
+# AI Assistant Demo
 
-An interactive AI teaching assistant powered by real-time voice communication and computer vision capabilities. This application enables natural conversations with an AI tutor that can see, hear, and respond to students in real-time.
+An interactive AI assistant powered by real-time voice communication and computer vision capabilities. This application enables natural conversations with an AI Assistant that can see, hear, and respond to students in real-time.
 
 ## Features
 
@@ -83,7 +83,7 @@ DAILY_BOTS_URL=your_daily_bots_url
    - End session
 
 ## Project Structure
-ai-teacher-demo/
+ai-assistant-demo/
 ├── app/ # Next.js app directory
 ├── components/
 │ ├── Session/ # Main session components
