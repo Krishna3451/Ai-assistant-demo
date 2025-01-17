@@ -13,22 +13,19 @@ export interface Language {
   value: string;
   ttsVoice: string;
 }
+export interface Category {
+  name: string;
+}
 
-export const CATERGORIES: Language[] = [
+export const CATERGORIES: Category[] = [
   {
-    name: "Agriculture",
-    value: "en",
-    ttsVoice: "79a125e8-cd45-4c13-8a67-188112f4dd22" // British voice
+    name: "Agriculture"
   },
   {
-    name: "Health",
-    value: "hi",
-    ttsVoice: "79a125e8-cd45-4c13-8a67-188112f4dd22" // Hindi voice
+    name: "Health"
   },
   {
-    name: "Education",
-    value: "ta",
-    ttsVoice: "79a125e8-cd45-4c13-8a67-188112f4dd22" // Tamil voice
+    name: "Education"
   },
 ];
 

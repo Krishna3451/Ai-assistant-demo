@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { useVoiceClient } from "realtime-ai-react";
 import { LANGUAGES, CATERGORIES } from "@/rtvi.config";
 import { useLanguageStore } from "@/lib/stores/languageStore";
+import { useCategoryStore } from "@/lib/stores/categoryStore";
 import HelpTip from "../ui/helptip";
 import { Label } from "../ui/label";
 import { Switch } from "../ui/switch";
@@ -23,6 +24,7 @@ export const Configure: React.FC<ConfigureProps> = React.memo(
     const modalRef = useRef<HTMLDialogElement>(null);
     const voiceClient = useVoiceClient();
     const { selectedLanguage, setLanguage } = useLanguageStore();
+    const { selectedCategory, setCategory } = useCategoryStore();
 
     useEffect(() => {
       const current = modalRef.current;
@@ -39,6 +41,10 @@ export const Configure: React.FC<ConfigureProps> = React.memo(
       if (voiceClient) {
         await setLanguage(e.target.value, voiceClient);
       }
+    };
+
+    const handleCategoryChange = async (e: React.ChangeEvent<HTMLSelectElement>) => {
+      setCategory(e.target.value);
     };
 
     return (
@@ -64,13 +70,13 @@ export const Configure: React.FC<ConfigureProps> = React.memo(
           <div className="mt-2">
             <Field label="Category" error={false}>
               <Select
-                onChange={handleLanguageChange}
-                value={selectedLanguage}
+                onChange={handleCategoryChange}
+                value={selectedCategory}
                 icon={<Globe size={24} />}
               >
-                {CATERGORIES.map((lang) => (
-                  <option key={lang.value} value={lang.value}>
-                    {lang.name}
+                {CATERGORIES.map((cat) => (
+                  <option key={cat.name} value={cat.name}>
+                    {cat.name}
                   </option>
                 ))}
               </Select>

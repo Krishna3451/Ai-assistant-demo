@@ -1,8 +1,8 @@
 
 
-# AI Assistant Demo
+# AI Teaching Assistant Demo
 
-An interactive AI assistant powered by real-time voice communication and computer vision capabilities. This application enables natural conversations with an AI Assistant that can see, hear, and respond to students in real-time.
+An interactive AI teaching assistant powered by real-time voice communication and computer vision capabilities. This application enables natural conversations with an AI tutor that can see, hear, and respond to students in real-time.
 
 ## Features
 
@@ -42,7 +42,7 @@ An interactive AI assistant powered by real-time voice communication and compute
 1. Clone the repository:
 ```bash
 
-git clone https://github.com/Krishna3451/Ai-assistant-demo.git
+cd ai-teacher-demo
 ```
 
 2. Install dependencies:
@@ -83,7 +83,7 @@ DAILY_BOTS_URL=your_daily_bots_url
    - End session
 
 ## Project Structure
-ai-assistant-demo/
+ai-teacher-demo/
 ├── app/ # Next.js app directory
 ├── components/
 │ ├── Session/ # Main session components

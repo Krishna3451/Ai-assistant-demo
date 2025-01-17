@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -p ${PORT:-3000}",
+    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
@@ -35,7 +35,7 @@
     "stripe": "^17.5.0",
     "tailwind-merge": "^2.3.0",
     "twilio": "^5.4.2",
-    "zustand": "^5.0.2"
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@types/node": "^20",
