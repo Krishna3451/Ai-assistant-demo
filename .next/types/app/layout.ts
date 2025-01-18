@@ -1,4 +1,4 @@
-// File: C:\Users\fkris\OneDrive\Documents\GitHub\Apka-mitr\app\layout.tsx
+// File: /Users/mayank/Documents/Ai-assistant-demo/app/layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 

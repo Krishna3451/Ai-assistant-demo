@@ -11,13 +11,13 @@ export function middleware(request: NextRequest) {
   // Check if the path is public
   const isPublicPath = publicPaths.some(path => pathname.startsWith(path));
 
-  // If the path is public and user is authenticated, redirect to home
-  if (isPublicPath && authCookie) {
-    return NextResponse.redirect(new URL('/', request.url));
+  // Always allow access to public paths regardless of auth status
+  if (isPublicPath) {
+    return NextResponse.next();
   }
 
   // If the path is private and user is not authenticated, redirect to login
-  if (!isPublicPath && !authCookie) {
+  if (!authCookie) {
     const loginUrl = new URL('/login', request.url);
     loginUrl.searchParams.set('from', pathname);
     return NextResponse.redirect(loginUrl);

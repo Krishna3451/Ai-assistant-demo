@@ -1,4 +1,4 @@
-// File: C:\Users\fkris\OneDrive\Documents\GitHub\Apka-mitr\app\api\route.ts
+// File: /Users/mayank/Documents/Ai-assistant-demo/app/api/route.ts
 import * as entry from '../../../../app/api/route.js'
 import type { NextRequest } from 'next/server.js'
 
