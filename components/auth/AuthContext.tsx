@@ -37,17 +37,24 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
       setUser(user);
       setLoading(false);
       if (user) {
-        // Set a cookie for middleware authentication
-        document.cookie = 'auth=true; path=/';
+        // Only set auth cookie if user is both authenticated and phone verified
+        if (isPhoneVerified) {
+          document.cookie = 'auth=true; path=/';
+          router.push('/');
+        } else {
+          document.cookie = 'auth=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+          router.push('/login');
+        }
       } else {
         // Remove the cookie when user is not authenticated
         document.cookie = 'auth=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
         setIsPhoneVerified(false);
+        router.push('/login');
       }
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [isPhoneVerified]);
 
   const signInWithGoogle = async () => {
     try {
@@ -80,8 +87,12 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
 
   const setPhoneVerified = (value: boolean) => {
     setIsPhoneVerified(value);
-    if (value) {
+    if (value && user) {
+      document.cookie = 'auth=true; path=/';
       router.push('/');
+    } else {
+      document.cookie = 'auth=; path=/; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+      router.push('/login');
     }
   };
 
